@@ -4,7 +4,9 @@
 (require 'yasnippet-config)
 
 (yas/setup "~/.emacs.d/plugins/yasnippet")
-(semantic-load-enable-code-helpers)
+
+(if (fboundp 'semantic-load-enable-code-helpers)
+    (semantic-load-enable-code-helpers))
 
 (ac-config-default)
 (add-hook 'c-mode-common-hook 
