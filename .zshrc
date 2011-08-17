@@ -57,7 +57,8 @@ bindkey -e
 # alias
 case ${OSTYPE} in
     darwin*)
-	alias ls="lis -G -w"
+	alias ls="ls -G -w"
+	alias emacs="/Applications/MacPorts/Emacs.app/Contents/MacOS/Emacs"
 	;;
     *)
 	alias ls="ls --color=auto"
