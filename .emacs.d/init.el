@@ -1,3 +1,6 @@
+(setq exec-path (cons "/opt/local/bin" exec-path))
+(setenv "PATH" (concat "/opt/local/bin:" (getenv "PATH")))
+
 (setq load-path
       (append (mapcar #'expand-file-name
 		      '("~/.emacs.d/"
