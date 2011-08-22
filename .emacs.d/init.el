@@ -11,7 +11,8 @@
 (mapc #'load
       '("config/anything-config"
 	"config/auto-install-config"
-	"config/auto-complete-config"))
+	"config/auto-complete-config"
+	"config/flymake-config"))
 
 (progn
   (show-paren-mode 1)
