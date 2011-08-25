@@ -41,6 +41,11 @@
 (savehist-mode 1)
 (setq history-length 5000)
 
+(setq backup-inhibited nil)
+
+(setq-default tab-width 4 
+              indent-tabs-mode nil)
+
 (defalias 'qrr 'query-replace-regexp)
 (defalias 'yes-or-no-p 'y-or-n-p)
 (defalias 'message-box 'message)
