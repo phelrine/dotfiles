@@ -1,0 +1,5 @@
+nmap j 10<C-e>
+nmap k 10<C-y>
+nmap <C-j> <Nop>
+
+set gui=addons,nobookmarks,nomenu,nonavigation,tabs
