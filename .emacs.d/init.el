@@ -41,8 +41,7 @@
 (savehist-mode 1)
 (setq history-length 5000)
 
-(setq backup-inhibited nil)
-
+(setq backup-inhibited t)
 (setq-default tab-width 4 
               indent-tabs-mode nil)
 
