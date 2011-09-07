@@ -1,4 +1,8 @@
 (require 'coffee-mode)
+(require 'auto-complete)
+
+;; auto-complete
+(push 'coffee-mode ac-modes)
 
 (defun coffee-custom ()
   "coffee-mode-hook"
@@ -16,7 +20,7 @@
 
   ;; Emacs key binding
   (define-key coffee-mode-map [(meta r)] 'coffee-compile-buffer)
-
+  
   ;; Compile '.coffee' files on every save
   (and (file-exists-p (buffer-file-name))
        (file-exists-p (coffee-compiled-file-name))
