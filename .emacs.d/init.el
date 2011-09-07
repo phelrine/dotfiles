@@ -2,18 +2,21 @@
 (setenv "PATH" (concat "/opt/local/bin:" (getenv "PATH")))
 
 (setq load-path
-      (append (mapcar #'expand-file-name
-		      '("~/.emacs.d/"
-			"~/.emacs.d/site-lisp/"
-			"~/.emacs.d/plugins/yasnippet/"))
-	      load-path))
+      (append (mapcar 
+               #'expand-file-name
+               '("~/.emacs.d/"
+                 "~/.emacs.d/site-lisp/"
+                 "~/.emacs.d/plugins/yasnippet/"
+                 "~/.emacs.d/plugins/coffee-mode/"))
+              load-path))
 
 (mapc #'load
       '("config/anything-config"
         "config/auto-install-config"
         "config/auto-complete-config"
         "config/flymake-config"
-        "config/ruby-config"))
+        "config/ruby-config"
+        "config/coffee-config"))
 
 (progn
   (show-paren-mode 1)
