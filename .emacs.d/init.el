@@ -10,10 +10,23 @@
                  "~/.emacs.d/plugins/coffee-mode/"))
               load-path))
 
+(require 'yasnippet-config)
+(require 'auto-complete-config)
+(require 'cedet)
+
+(yas/setup "~/.emacs.d/plugins/yasnippet")
+(if (fboundp 'semantic-load-enable-code-helpers)
+    (semantic-load-enable-code-helpers))
+
+(ac-config-default)
+(add-hook 'c-mode-common-hook 
+          (lambda ()
+            (add-to-list 'ac-sources 'ac-source-semantic)))
+(global-auto-complete-mode t)
+
 (mapc #'load
       '("config/anything-config"
         "config/auto-install-config"
-        "config/auto-complete-config"
         "config/flymake-config"
         "config/ruby-config"
         "config/coffee-config"))
