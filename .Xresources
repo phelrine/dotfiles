@@ -1,0 +1,7 @@
+Emacs*useXIM: false
+Emacs*font: Ricty
+urxvt*font: xft:Ricty:pixelsize=18
+urxvt*scrollBar: flase
+urxvt*background: gray
+urxvt*highlightColor: violet
+urxvt*underlineColor: black
