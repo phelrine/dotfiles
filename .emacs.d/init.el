@@ -1,5 +1,5 @@
-(setq exec-path (cons "/opt/local/bin" exec-path))
-(setenv "PATH" (concat "/opt/local/bin:" (getenv "PATH")))
+(setq exec-path `(,(concat (getenv "HOME") "/bin") "/opt/local/bin" ,@exec-path))
+(setenv "PATH" (concat (getenv "HOME") "/bin:/opt/local/bin:" (getenv "PATH")))
 
 (setq load-path
       (append (mapcar 
