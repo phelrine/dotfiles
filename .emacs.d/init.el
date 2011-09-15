@@ -13,6 +13,7 @@
 (require 'yasnippet-config)
 (require 'auto-complete-config)
 (require 'cedet)
+(require 'open-junk-file)
 
 (yas/setup "~/.emacs.d/plugins/yasnippet")
 (if (fboundp 'semantic-load-enable-code-helpers)
