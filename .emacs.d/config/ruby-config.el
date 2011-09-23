@@ -12,3 +12,20 @@
     (list "ruby" (list "-c" local-file))))
 (push '(".+\\.rb$" flymake-ruby-init) flymake-allowed-file-name-masks)
 (push '("Rakefile$" flymake-ruby-init) flymake-allowed-file-name-masks)
+
+(require 'hideshow)
+(add-hook 'ruby-mode-hook 
+          (lambda ()
+            (hs-minor-mode t)
+            (hs-hide-all)))
+
+(let ((ruby-mode-hs-info 
+       '(ruby-mode
+         "def\\|if\\|unless\\|case\\|while\\|until\\|for\\|begin\\|do"
+         "end"
+         "#"
+         ruby-move-to-block
+         nil)))
+  (if (not (member ruby-mode-hs-info hs-special-modes-alist))
+      (setq hs-special-modes-alist
+            (cons ruby-mode-hs-info hs-special-modes-alist))))

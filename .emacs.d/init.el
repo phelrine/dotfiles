@@ -29,6 +29,7 @@
       '("config/anything-config"
         "config/auto-install-config"
         "config/flymake-config"
+        "config/cc-config"
         "config/ruby-config"
         "config/coffee-config"))
 
@@ -48,6 +49,8 @@
 
 (global-set-key (kbd "C-h") 'delete-backward-char)
 (global-set-key (kbd "C-o") 'other-window)
+(require 'hideshow)
+(global-set-key (kbd "C-t") 'hs-toggle-hiding)
 
 (require 'auto-async-byte-compile)
 (add-hook 'emacs-lisp-mode-hook 'enable-auto-async-byte-compile-mode)
