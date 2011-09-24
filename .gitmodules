@@ -1,3 +1,6 @@
 [submodule ".emacs.d/plugins/coffee-mode"]
 	path = .emacs.d/plugins/coffee-mode
 	url = https://github.com/defunkt/coffee-mode.git
+[submodule ".emacs.d/plugins/undo-tree"]
+	path = .emacs.d/plugins/undo-tree
+	url = http://www.dr-qubit.org/git/undo-tree.git

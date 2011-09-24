@@ -1,26 +1,31 @@
 (setq exec-path `(,(concat (getenv "HOME") "/bin") "/opt/local/bin" ,@exec-path))
 (setenv "PATH" (concat (getenv "HOME") "/bin:/opt/local/bin:" (getenv "PATH")))
+(setenv "LANG" "C")
 
 (setq load-path
-      (append (mapcar 
+      (append (mapcar
                #'expand-file-name
                '("~/.emacs.d/"
                  "~/.emacs.d/site-lisp/"
                  "~/.emacs.d/plugins/yasnippet/"
-                 "~/.emacs.d/plugins/coffee-mode/"))
+                 "~/.emacs.d/plugins/coffee-mode/"
+                 "~/.emacs.d/plugins/undo-tree/"
+                 ))
               load-path))
 
 (require 'yasnippet-config)
 (require 'auto-complete-config)
 (require 'cedet)
 (require 'open-junk-file)
+(require 'undo-tree)
+(global-undo-tree-mode)
 
 (yas/setup "~/.emacs.d/plugins/yasnippet")
 (if (fboundp 'semantic-load-enable-code-helpers)
     (semantic-load-enable-code-helpers))
 
 (ac-config-default)
-(add-hook 'c-mode-common-hook 
+(add-hook 'c-mode-common-hook
           (lambda ()
             (add-to-list 'ac-sources 'ac-source-semantic)))
 (global-auto-complete-mode t)
