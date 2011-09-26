@@ -70,8 +70,11 @@
 (setq history-length 5000)
 
 (setq backup-inhibited t)
-(setq-default tab-width 4 
+(setq-default tab-width 4
               indent-tabs-mode nil)
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+(global-auto-revert-mode 1)
 
 (defalias 'qrr 'query-replace-regexp)
 (defalias 'yes-or-no-p 'y-or-n-p)
