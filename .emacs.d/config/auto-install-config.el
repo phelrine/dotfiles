@@ -9,3 +9,4 @@
 ;; (auto-install-from-emacswiki "yasnippet-config.el")
 ;; (auto-install-from-emacswiki "auto-async-byte-compile.el")
 ;; (auto-install-from-emacswiki "flymake-cursor.el")
+;; (auto-install-from-emacswiki "open-junk-file.el")
