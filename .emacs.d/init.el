@@ -56,6 +56,8 @@
 (global-set-key (kbd "C-o") 'other-window)
 (require 'hideshow)
 (global-set-key (kbd "C-t") 'hs-toggle-hiding)
+(require 'anything-config)
+(global-set-key (kbd "M-y") 'anything-show-kill-ring)
 
 (require 'auto-async-byte-compile)
 (add-hook 'emacs-lisp-mode-hook 'enable-auto-async-byte-compile-mode)
