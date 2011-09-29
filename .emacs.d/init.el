@@ -19,6 +19,7 @@
 (require 'open-junk-file)
 (require 'undo-tree)
 (global-undo-tree-mode)
+(require 'magit)
 
 (yas/setup "~/.emacs.d/plugins/yasnippet")
 (if (fboundp 'semantic-load-enable-code-helpers)
