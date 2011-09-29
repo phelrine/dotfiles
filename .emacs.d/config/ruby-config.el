@@ -14,10 +14,7 @@
 (push '("Rakefile$" flymake-ruby-init) flymake-allowed-file-name-masks)
 
 (require 'hideshow)
-(add-hook 'ruby-mode-hook 
-          (lambda ()
-            (hs-minor-mode t)
-            (hs-hide-all)))
+(add-hook 'ruby-mode-hook (lambda () (hs-minor-mode t)))
 
 (let ((ruby-mode-hs-info 
        '(ruby-mode
