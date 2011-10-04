@@ -1,0 +1,11 @@
+[user]
+	name = phelrine
+	email = phelrine@gmail.com
+[core]
+	editor = emacs
+[color]
+	ui = auto
+	
+[alias]
+	st = status
+	co = checkout
