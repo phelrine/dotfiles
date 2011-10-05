@@ -10,6 +10,7 @@
                  "~/.emacs.d/plugins/yasnippet/"
                  "~/.emacs.d/plugins/coffee-mode/"
                  "~/.emacs.d/plugins/undo-tree/"
+                 "~/.emacs.d/plugins/magit/"
                  ))
               load-path))
 
@@ -19,7 +20,7 @@
 (require 'open-junk-file)
 (require 'undo-tree)
 (global-undo-tree-mode)
-(require 'magit)
+
 
 (yas/setup "~/.emacs.d/plugins/yasnippet")
 (if (fboundp 'semantic-load-enable-code-helpers)
@@ -55,10 +56,15 @@
 
 (global-set-key (kbd "C-h") 'delete-backward-char)
 (global-set-key (kbd "C-o") 'other-window)
+
 (require 'hideshow)
 (global-set-key (kbd "C-t") 'hs-toggle-hiding)
+
 (require 'anything-config)
 (global-set-key (kbd "M-y") 'anything-show-kill-ring)
+
+(require 'magit)
+(global-set-key (kbd "C-x g") 'magit-status)
 
 (require 'auto-async-byte-compile)
 (add-hook 'emacs-lisp-mode-hook 'enable-auto-async-byte-compile-mode)

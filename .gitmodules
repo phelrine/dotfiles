@@ -4,3 +4,6 @@
 [submodule ".emacs.d/plugins/undo-tree"]
 	path = .emacs.d/plugins/undo-tree
 	url = http://www.dr-qubit.org/git/undo-tree.git
+[submodule ".emacs.d/plugins/magit"]
+	path = .emacs.d/plugins/magit
+	url = https://github.com/magit/magit.git
