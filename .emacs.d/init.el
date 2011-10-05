@@ -50,7 +50,7 @@
   (column-number-mode 1)
   (tool-bar-mode -1)
   (menu-bar-mode -1)
-  (scroll-bar-mode -1)
+  (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
   nil)
 
 (global-set-key (kbd "C-h") 'delete-backward-char)
