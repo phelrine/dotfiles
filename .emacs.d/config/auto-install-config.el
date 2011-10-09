@@ -10,3 +10,5 @@
 ;; (auto-install-from-emacswiki "auto-async-byte-compile.el")
 ;; (auto-install-from-emacswiki "flymake-cursor.el")
 ;; (auto-install-from-emacswiki "open-junk-file.el")
+;; (auto-install-from-url "http://github.com/kiwanami/emacs-window-layout/raw/master/window-layout.el")
+;; (auto-install-from-url "http://github.com/kiwanami/emacs-window-manager/raw/master/e2wm.el")
