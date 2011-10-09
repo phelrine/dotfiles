@@ -5,15 +5,14 @@
 (setq load-path
       (append (mapcar
                #'expand-file-name
-               '("~/.emacs.d/"
-                 "~/.emacs.d/site-lisp/"
-                 "~/.emacs.d/yasnippet/"
-                 "~/.emacs.d/plugins/coffee-mode/"
-                 "~/.emacs.d/plugins/undo-tree/"
-                 "~/.emacs.d/plugins/magit/"
-                 "~/.emacs.d/plugins/twittering-mode/"
-                 ))
+               '("~/.emacs.d/" "~/.emacs.d/site-lisp/" "~/.emacs.d/yasnippet/"))
               load-path))
+(let ((default-directory  "~/.emacs.d/modules/"))
+  (setq load-path
+        (append
+         (let ((load-path (copy-sequence load-path))) ;; Shadow
+           (normal-top-level-add-subdirs-to-load-path))
+         load-path)))
 
 (require 'yasnippet-config)
 (require 'auto-complete-config)

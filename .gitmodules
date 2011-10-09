@@ -1,12 +1,12 @@
-[submodule ".emacs.d/plugins/coffee-mode"]
-	path = .emacs.d/plugins/coffee-mode
+[submodule ".emacs.d/modules/coffee-mode"]
+	path = .emacs.d/modules/coffee-mode
 	url = https://github.com/defunkt/coffee-mode.git
-[submodule ".emacs.d/plugins/undo-tree"]
-	path = .emacs.d/plugins/undo-tree
-	url = http://www.dr-qubit.org/git/undo-tree.git
-[submodule ".emacs.d/plugins/magit"]
-	path = .emacs.d/plugins/magit
+[submodule ".emacs.d/modules/magit"]
+	path = .emacs.d/modules/magit
 	url = https://github.com/magit/magit.git
-[submodule ".emacs.d/plugins/twittering-mode"]
-	path = .emacs.d/plugins/twittering-mode
+[submodule ".emacs.d/modules/twittering-mode"]
+	path = .emacs.d/modules/twittering-mode
 	url = https://github.com/hayamiz/twittering-mode.git
+[submodule ".emacs.d/modules/undo-tree"]
+	path = .emacs.d/modules/undo-tree
+	url = http://www.dr-qubit.org/git/undo-tree.git
