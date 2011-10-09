@@ -7,3 +7,6 @@
 [submodule ".emacs.d/plugins/magit"]
 	path = .emacs.d/plugins/magit
 	url = https://github.com/magit/magit.git
+[submodule ".emacs.d/plugins/twittering-mode"]
+	path = .emacs.d/plugins/twittering-mode
+	url = https://github.com/hayamiz/twittering-mode.git

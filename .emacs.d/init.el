@@ -11,6 +11,7 @@
                  "~/.emacs.d/plugins/coffee-mode/"
                  "~/.emacs.d/plugins/undo-tree/"
                  "~/.emacs.d/plugins/magit/"
+                 "~/.emacs.d/plugins/twittering-mode/"
                  ))
               load-path))
 
