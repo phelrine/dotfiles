@@ -7,7 +7,7 @@
                #'expand-file-name
                '("~/.emacs.d/"
                  "~/.emacs.d/site-lisp/"
-                 "~/.emacs.d/plugins/yasnippet/"
+                 "~/.emacs.d/yasnippet/"
                  "~/.emacs.d/plugins/coffee-mode/"
                  "~/.emacs.d/plugins/undo-tree/"
                  "~/.emacs.d/plugins/magit/"
@@ -23,7 +23,7 @@
 (global-undo-tree-mode)
 
 
-(yas/setup "~/.emacs.d/plugins/yasnippet")
+(yas/setup "~/.emacs.d/yasnippet")
 (if (fboundp 'semantic-load-enable-code-helpers)
     (semantic-load-enable-code-helpers))
 
