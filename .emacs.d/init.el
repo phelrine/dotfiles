@@ -18,9 +18,9 @@
 (require 'auto-complete-config)
 (require 'cedet)
 (require 'open-junk-file)
+(require 'switch-window)
 (require 'undo-tree)
 (global-undo-tree-mode)
-
 
 (yas/setup "~/.emacs.d/yasnippet")
 (if (fboundp 'semantic-load-enable-code-helpers)
@@ -62,6 +62,9 @@
 
 (require 'anything-config)
 (global-set-key (kbd "M-y") 'anything-show-kill-ring)
+
+(require 'e2wm)
+(global-set-key (kbd "M-+") 'e2wm:start-management)
 
 (require 'magit)
 (global-set-key (kbd "C-x g") 'magit-status)

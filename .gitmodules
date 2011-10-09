@@ -10,3 +10,12 @@
 [submodule ".emacs.d/modules/undo-tree"]
 	path = .emacs.d/modules/undo-tree
 	url = http://www.dr-qubit.org/git/undo-tree.git
+[submodule ".emacs.d/modules/emacs-window-layout"]
+	path = .emacs.d/modules/emacs-window-layout
+	url = https://github.com/kiwanami/emacs-window-layout.git
+[submodule ".emacs.d/modules/emacs-window-manager"]
+	path = .emacs.d/modules/emacs-window-manager
+	url = https://github.com/kiwanami/emacs-window-manager.git
+[submodule ".emacs.d/modules/switch-window"]
+	path = .emacs.d/modules/switch-window
+	url = https://github.com/dimitri/switch-window.git
