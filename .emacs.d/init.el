@@ -5,7 +5,7 @@
 (setq load-path
       (append (mapcar
                #'expand-file-name
-               '("~/.emacs.d/" "~/.emacs.d/site-lisp/" "~/.emacs.d/yasnippet/"))
+               '("~/.emacs.d/site-lisp/" "~/.emacs.d/yasnippet/"))
               load-path))
 (let ((default-directory  "~/.emacs.d/modules/"))
   (setq load-path
@@ -32,13 +32,10 @@
             (add-to-list 'ac-sources 'ac-source-semantic)))
 (global-auto-complete-mode t)
 
-(mapc #'load
-      '("config/anything-config"
-        "config/auto-install-config"
-        "config/flymake-config"
-        "config/cc-config"
-        "config/ruby-config"
-        "config/coffee-config"))
+(let ((config-dir "~/.emacs.d/config/"))
+  (mapc (lambda (config)
+          (load (concat config-dir (replace-regexp-in-string "\\.el$" "" config))))
+        (directory-files config-dir nil "\\.el$")))
 
 (progn
   (show-paren-mode 1)
