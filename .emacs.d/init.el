@@ -56,6 +56,7 @@
 
 (global-set-key (kbd "C-h") 'delete-backward-char)
 (global-set-key (kbd "C-o") 'other-window)
+(windmove-default-keybindings)
 
 (require 'hideshow)
 (global-set-key (kbd "C-t") 'hs-toggle-hiding)
