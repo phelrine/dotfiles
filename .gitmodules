@@ -19,3 +19,6 @@
 [submodule ".emacs.d/modules/switch-window"]
 	path = .emacs.d/modules/switch-window
 	url = https://github.com/dimitri/switch-window.git
+[submodule ".emacs.d/modules/jaunte"]
+	path = .emacs.d/modules/jaunte
+	url = https://github.com/kawaguchi/jaunte.el.git

@@ -57,6 +57,9 @@
 (global-set-key (kbd "C-o") 'other-window)
 (windmove-default-keybindings)
 
+(require 'jaunte)
+(global-set-key (kbd "C-c C-j") 'jaunte)
+
 (require 'hideshow)
 (global-set-key (kbd "C-t") 'hs-toggle-hiding)
 
