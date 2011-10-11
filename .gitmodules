@@ -22,3 +22,6 @@
 [submodule ".emacs.d/modules/jaunte"]
 	path = .emacs.d/modules/jaunte
 	url = https://github.com/kawaguchi/jaunte.el.git
+[submodule ".emacs.d/modules/deferred"]
+	path = .emacs.d/modules/deferred
+	url = https://github.com/kiwanami/emacs-deferred.git
