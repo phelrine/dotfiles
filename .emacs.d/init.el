@@ -1,6 +1,8 @@
-(setq exec-path `(,(concat (getenv "HOME") "/bin") "/opt/local/bin" ,@exec-path))
-(setenv "PATH" (concat (getenv "HOME") "/bin:/opt/local/bin:" (getenv "PATH")))
-(setenv "LANG" "C")
+(let* ((home (getenv "HOME"))
+       (eprefix (concat home "/Gentoo")))
+  (setq exec-path `(,(concat home "/bin") ,(concat eprefix "/usr/bin") ,(concat eprefix "/bin") "/usr/local/bin" ,@exec-path))
+  (setenv "PATH" (concat home "/bin:" eprefix "/usr/bin:" eprefix "/bin:" "/usr/local/bin:" (getenv "PATH")))
+  (setenv "LANG" "C"))
 
 (setq load-path
       (append (mapcar
