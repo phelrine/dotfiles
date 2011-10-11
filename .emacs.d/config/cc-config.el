@@ -11,17 +11,11 @@
 (defun flymake-c++-init ()
   (list "g++" (list "-Wall" "-Wextra" "-fsyntax-only" (flymake-local-file))))
 
-(push '(".+\\.c$" flymake-c-init) flymake-allowed-file-name-masks)
-(push '(".+\\.cc$" flymake-c++-init) flymake-allowed-file-name-masks)
-
-(require 'lmcompile)
-(add-hook 'compilation-finish-functions 'vj-compilation-finish-highlight)
-(defun vj-compilation-finish-highlight (buffer result-str)
-  (interactive)
-  (lmcompile-do-highlight))
+;; (push '(".+\\.c$" flymake-c-init) flymake-allowed-file-name-masks)
+;; (push '(".+\\.cc$" flymake-c++-init) flymake-allowed-file-name-masks)
 
 (dolist (hook '(c++-mode-hook c-mode-hook))
   (add-hook hook (lambda ()
                    (hs-minor-mode t)
-                   ;(flymake-mode t)
+                   (flymake-mode t)
                    )))
