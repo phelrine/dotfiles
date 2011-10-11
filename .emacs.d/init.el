@@ -58,6 +58,10 @@
 (require 'hideshow)
 (global-set-key (kbd "C-t") 'hs-toggle-hiding)
 
+(autoload 'dmacro-exec "dmacro" nil t)
+(defconst *dmacro-key* (kbd "<f5>") "繰返し指定キー")
+(global-set-key *dmacro-key* 'dmacro-exec)
+
 (require 'anything-config)
 (global-set-key (kbd "M-y") 'anything-show-kill-ring)
 
