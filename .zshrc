@@ -1,4 +1,6 @@
 export LANG=ja_JP.UTF-8
+EPREFIX=${HOME}/Gentoo
+export PATH=${EPREFIX}/usr/bin:${EPREFIX}/bin:${EPREFIX}/usr/sbin:$PATH
 
 autoload -U colors; colors
 
@@ -55,13 +57,13 @@ bindkey -e
 [[ $EMACS = t ]] && unsetopt zle
 
 # alias
+alias ls="ls --color=auto"
 case ${OSTYPE} in
     darwin*)
-	alias ls="ls -G -w"
-	alias emacs="/Applications/MacPorts/Emacs.app/Contents/MacOS/Emacs"
+    # alias ls="ls -G -w"
+	# alias emacs="/Applications/MacPorts/Emacs.app/Contents/MacOS/Emacs"
 	;;
     *)
-	alias ls="ls --color=auto"
 	;;
 esac
 
