@@ -93,3 +93,11 @@
 (defalias 'qrr 'query-replace-regexp)
 (defalias 'yes-or-no-p 'y-or-n-p)
 (defalias 'message-box 'message)
+
+(when (eq (window-system) 'ns)
+  (set-fontset-font "fontset-default"
+                    'japanese-jisx0208
+                    '("Hiragino_Kaku_Gothic_ProN" . "iso10646-1"))
+  (set-fontset-font "fontset-default"
+                    'katakana-jisx0201
+                    '("Hiragino_Kaku_Gothic_ProN" . "iso10646-1")))
