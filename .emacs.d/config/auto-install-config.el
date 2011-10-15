@@ -11,3 +11,4 @@
 ;; (auto-install-from-emacswiki "flymake-cursor.el")
 ;; (auto-install-from-emacswiki "open-junk-file.el")
 ;; (auto-install-from-url "http://www.pitecan.com/DynamicMacro/dmacro.el")
+;; (auto-install-from-emacswiki "tempbuf.el")
