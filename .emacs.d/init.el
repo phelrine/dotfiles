@@ -86,7 +86,7 @@
 (savehist-mode 1)
 (setq history-length 5000)
 
-(setq backup-inhibited t)
+(setq make-backup-files nil)
 (setq-default tab-width 4
               indent-tabs-mode nil)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
