@@ -14,4 +14,15 @@
             (local-set-key (kbd "<mouse-5>") 'inertias-up-wheel)
             (local-set-key (kbd "M-v") 'inertias-down)
             (local-set-key (kbd "C-v") 'inertias-up)
+            (local-set-key (kbd "o") 'other-window)
             ))
+
+(defun twit-two-pane ()
+  (interactive)
+  (if (not (one-window-p)) (delete-other-windows))
+  (twittering-home-timeline)
+  (split-window-horizontally)
+  (other-window 1)
+  (twittering-replies-timeline))
+
+(global-set-key (kbd "C-x t") 'twit-two-pane)
