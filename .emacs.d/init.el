@@ -29,10 +29,7 @@
     (semantic-load-enable-code-helpers))
 
 (ac-config-default)
-(add-hook 'c-mode-common-hook
-          (lambda ()
-            (add-to-list 'ac-sources 'ac-source-semantic)))
-(global-auto-complete-mode t)
+(add-hook 'find-file-hook 'auto-complete-mode)
 
 (let ((config-dir "~/.emacs.d/config/"))
   (mapc (lambda (config)
