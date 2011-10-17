@@ -5,7 +5,9 @@
 	editor = emacs
 [color]
 	ui = auto
-	
+
 [alias]
 	st = status
 	co = checkout
+	df = diff
+
