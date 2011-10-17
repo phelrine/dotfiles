@@ -60,12 +60,13 @@
 (require 'hideshow)
 (global-set-key (kbd "C-t") 'hs-toggle-hiding)
 
+(require 'anything-startup)
+(global-set-key (kbd "C-x C-b") 'anything-buffers+)
+(global-set-key (kbd "M-y") 'anything-show-kill-ring)
+
 (autoload 'dmacro-exec "dmacro" nil t)
 (defconst *dmacro-key* (kbd "<f5>") "繰返し指定キー")
 (global-set-key *dmacro-key* 'dmacro-exec)
-
-(require 'anything-config)
-(global-set-key (kbd "M-y") 'anything-show-kill-ring)
 
 (require 'e2wm)
 (global-set-key (kbd "M-+") 'e2wm:start-management)
@@ -101,3 +102,4 @@
   (set-fontset-font "fontset-default"
                     'katakana-jisx0201
                     '("Hiragino_Kaku_Gothic_ProN" . "iso10646-1")))
+
