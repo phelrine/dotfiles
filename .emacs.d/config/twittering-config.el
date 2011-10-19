@@ -4,6 +4,10 @@
 (setq twittering-icon-mode t)
 (setq twittering-scroll-mode t)
 (setq twittering-display-remaining t)
+(setq twittering-status-format
+      "%i%s %S
+%FILL[  ]{%T}
+%FILL[  ]{- %@ from %f%r%R -}\n")
 
 (require 'inertial-scroll)
 (add-hook 'twittering-mode-hook
