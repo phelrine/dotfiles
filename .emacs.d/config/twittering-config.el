@@ -21,6 +21,8 @@
             (local-set-key (kbd "o") 'other-window)
             ))
 
+(add-hook 'twittering-edit-mode-hook 'skk-mode)
+
 (defun twit-two-pane ()
   (interactive)
   (if (not (one-window-p)) (delete-other-windows))
