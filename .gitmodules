@@ -25,3 +25,6 @@
 [submodule ".emacs.d/modules/deferred"]
 	path = .emacs.d/modules/deferred
 	url = https://github.com/kiwanami/emacs-deferred.git
+[submodule ".emacs.d/modules/emacs-zlc"]
+	path = .emacs.d/modules/emacs-zlc
+	url = https://github.com/mooz/emacs-zlc.git
