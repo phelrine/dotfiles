@@ -24,7 +24,10 @@
 (require 'undo-tree)
 (global-undo-tree-mode)
 
+(require 'dropdown-list)
 (yas/setup "~/.emacs.d/yasnippet")
+(setq yas/prompt-functions '(yas/dropdown-prompt yas/completing-prompt))
+
 (if (fboundp 'semantic-load-enable-code-helpers)
     (semantic-load-enable-code-helpers))
 
