@@ -108,5 +108,11 @@
                     '("Hiragino_Kaku_Gothic_ProN" . "iso10646-1"))
   (set-fontset-font "fontset-default"
                     'katakana-jisx0201
-                    '("Hiragino_Kaku_Gothic_ProN" . "iso10646-1")))
+                    '("Hiragino_Kaku_Gothic_ProN" . "iso10646-1"))
+  (setq default-frame-alist
+        (append default-frame-alist
+                '((width . 140)
+                  (height . 60))))
+  )
+
 
