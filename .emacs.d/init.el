@@ -16,6 +16,7 @@
            (normal-top-level-add-subdirs-to-load-path))
          load-path)))
 
+(require 'zlc)
 (require 'yasnippet-config)
 (require 'auto-complete-config)
 (require 'cedet)
