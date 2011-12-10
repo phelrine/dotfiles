@@ -1,0 +1,4 @@
+---
+gem: "--no-ri --no-rdoc --user-install"
+search: --remote
+uninstall: -i ${HOME}/.gem/ruby/1.9.1/
