@@ -54,15 +54,6 @@ bindkey -e
 
 # alias
 alias ls="ls --color=auto"
-case ${OSTYPE} in
-    darwin*)
-    # alias ls="ls -G -w"
-	# alias emacs="/Applications/MacPorts/Emacs.app/Contents/MacOS/Emacs"
-	;;
-    *)
-	;;
-esac
-
 alias du="du -h"
 alias df="df -h"
 alias su="su -l"
