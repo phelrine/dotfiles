@@ -1,7 +1,7 @@
 (require 'auto-install)
 
 (setq auto-install-directory "~/.emacs.d/site-lisp/")
-(auto-install-update-emacswiki-package-name t)
+;; (auto-install-update-emacswiki-package-name t)
 (auto-install-compatibility-setup)
 
 ;; (auto-install-batch "anything")

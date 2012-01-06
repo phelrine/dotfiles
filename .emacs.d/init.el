@@ -1,8 +1,7 @@
-(let* ((home (getenv "HOME"))
-       (eprefix (concat home "/Gentoo")))
-  (setq exec-path `(,(concat home "/bin") ,(concat eprefix "/usr/bin") ,(concat eprefix "/bin") "/usr/local/bin" ,@exec-path))
-  (setenv "PATH" (concat home "/bin:" eprefix "/usr/bin:" eprefix "/bin:" "/usr/local/bin:" (getenv "PATH")))
-  (setenv "LANG" "C"))
+(let* ((home (getenv "HOME")))
+  (setq exec-path `(,(concat home "/bin") "/usr/local/bin" "/bin" "/usr/bin" ,@exec-path))
+  (setenv "PATH" (concat home "/bin:/usr/local/bin:/bin:/usr/bin:" (getenv "PATH")))
+  (setenv "LANG" "ja_JP.UTF-8"))
 
 (setq load-path
       (append (mapcar
@@ -16,7 +15,6 @@
            (normal-top-level-add-subdirs-to-load-path))
          load-path)))
 
-(require 'zlc)
 (require 'yasnippet-config)
 (require 'auto-complete-config)
 (require 'cedet)
@@ -69,13 +67,6 @@
 (global-set-key (kbd "C-x C-b") 'anything-buffers+)
 (global-set-key (kbd "M-y") 'anything-show-kill-ring)
 
-(autoload 'dmacro-exec "dmacro" nil t)
-(defconst *dmacro-key* (kbd "<f5>") "繰返し指定キー")
-(global-set-key *dmacro-key* 'dmacro-exec)
-
-(require 'e2wm)
-(global-set-key (kbd "M-+") 'e2wm:start-management)
-
 (require 'magit)
 (global-set-key (kbd "C-x g") 'magit-status)
 
@@ -116,4 +107,4 @@
                   (height . 60))))
   )
 
-
+(setq YaTeX-kanji-code 4)
