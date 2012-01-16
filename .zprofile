@@ -1,4 +1,12 @@
-export LANG=ja_JP.UTF-8
+case $TERM in
+    linux)
+            LANG=C
+            ;;
+    *)
+            LANG=ja_JP.UTF-8
+            ;;
+esac
+export LANG
 
 case $OSTYPE in
     darwin*)
