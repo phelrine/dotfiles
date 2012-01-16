@@ -103,8 +103,8 @@
                     '("Hiragino_Kaku_Gothic_ProN" . "iso10646-1"))
   (setq default-frame-alist
         (append default-frame-alist
-                '((width . 140)
-                  (height . 60))))
+                '((width . 120)
+                  (height . 40))))
   )
 
 (setq YaTeX-kanji-code 4)
