@@ -13,8 +13,9 @@ case $OSTYPE in
         PYTHONPATH="/Library/Frameworks/Python.framework/Versions/2.7/bin"
         COREUTILSPATH="/usr/local/coreutils/bin"
         PATH="$PYTHONPATH:$COREUTILSPATH:$PATH"
-        export PATH
         ;;
     *)
+        PATH="${HOME}/.gem/ruby/1.9.1/bin:$PATH"
         ;;
 esac
+export PATH
