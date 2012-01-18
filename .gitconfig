@@ -1,13 +1,16 @@
 [user]
-	name = phelrine
-	email = phelrine@gmail.com
+        name = phelrine
+        email = phelrine@gmail.com
 [core]
-	editor = emacs
+        editor = emacs
 [color]
-	ui = auto
+        ui = auto
 
 [alias]
-	st = status
-	co = checkout
-	df = diff
+        st = status
+        co = checkout
+        df = diff
 
+[github]
+        user = phelrine
+        token = ! "ruby -rpit -e \"print Pit.get('github')['token']\""
