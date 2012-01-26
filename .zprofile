@@ -15,7 +15,7 @@ case $OSTYPE in
         PATH="$PYTHONPATH:$COREUTILSPATH:$PATH"
         ;;
     *)
-        PATH="${HOME}/.gem/ruby/1.9.1/bin:$PATH"
         ;;
 esac
+PATH="${HOME}/.gem/ruby/1.9.1/bin:$PATH"
 export PATH
