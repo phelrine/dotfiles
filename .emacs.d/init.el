@@ -53,7 +53,10 @@
   nil)
 
 (global-set-key (kbd "C-h") 'delete-backward-char)
-(global-set-key (kbd "C-o") 'other-window)
+(global-set-key (kbd "C-o") '(lambda () (interactive)
+                               (call-interactively
+                                (if (<= (length (window-list)) 2) 'other-window 'switch-window))))
+
 (windmove-default-keybindings)
 
 (require 'jaunte)
