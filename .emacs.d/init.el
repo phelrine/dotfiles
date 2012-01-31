@@ -109,6 +109,3 @@
                 '((width . 120)
                   (height . 40))))
   )
-
-(setq auto-mode-alist (cons '("\\.tex\\'" . latex-mode) auto-mode-alist))
-(add-hook 'latex-mode-hook 'reftex-mode)
