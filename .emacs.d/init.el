@@ -107,4 +107,5 @@
                   (height . 40))))
   )
 
-(setq YaTeX-kanji-code 4)
+(setq auto-mode-alist (cons '("\\.tex\\'" . latex-mode) auto-mode-alist))
+(add-hook 'latex-mode-hook 'reftex-mode)
