@@ -12,3 +12,4 @@
 ;; (auto-install-from-emacswiki "open-junk-file.el")
 ;; (auto-install-from-url "http://www.pitecan.com/DynamicMacro/dmacro.el")
 ;; (auto-install-from-emacswiki "tempbuf.el")
+;; (auto-install-from-emacswiki "cycle-buffer.el")
