@@ -1,7 +1,1 @@
-*.elc
-/.emacs.d/ac-comphist.dat
-/.emacs.d/history
-/.emacs.d/auto-save-list
-/.emacs.d/tramp
-/.emacs.d/url/cookies
-/wget-log
+*~
