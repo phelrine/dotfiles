@@ -1,7 +1,7 @@
 #!/bin/sh
 
-DOTFILEDIR=`dirname $0`
-cd $DOTFILEDIR
+cd `dirname $0`
+DOTFILEDIR=`pwd`
 
 FILES=".gemrc .gitconfig .tmux.conf .zshrc .zprofile"
 
