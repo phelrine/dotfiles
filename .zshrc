@@ -17,17 +17,17 @@ if [ "${TREM}" != "dumb" ]; then
 fi
 
 autoload -U compinit; compinit	# 補完を有効
-setopt auto_cd
+# setopt auto_cd
+# setopt no_clobber		# リダイレクト上書き無効
 setopt auto_param_slash
 setopt auto_pushd
 setopt auto_resume
 setopt brace_ccl
 setopt correct
-setopt ignore_eof		# eofを無効
+setopt ignore_eof
 setopt list_packed
 setopt magic_equal_subst
 setopt mark_dirs
-setopt no_clobber		# リダイレクト上書き無効
 setopt no_flow_control		# C-s C-qを無効
 setopt prompt_subst
 setopt pushd_ignore_dups
@@ -49,11 +49,19 @@ setopt hist_ignore_space
 setopt hist_reduce_blanks
 setopt share_history
 
+REPORTTIME=5
+
 bindkey -e
 [[ $EMACS = t ]] && unsetopt zle
 
 # alias
-alias ls="ls --color=auto"
+case $OSTYPE in
+    darwin*)
+        alias ls="ls -G"
+        ;;
+    *)
+        alias ls="ls --color=auto"
+esac
 alias du="du -h"
 alias df="df -h"
 alias su="su -l"
@@ -61,4 +69,4 @@ alias py="python"
 alias pylab="ipython --pylab"
 alias asum="awk '{sum += \$1} END{print sum}'"
 alias amean="awk '{sum += \$1} END{print sum/NR}'"
-alias pexec="\`xsel -b\`"
+alias x=exit
