@@ -1,16 +1,22 @@
 autoload -U colors; colors
 
 if [ "${TREM}" != "dumb" ]; then
-    prompt_prompt=${1:-'blue'}
-    prompt_user=${2:-'green'}
-    prompt_root=${3:-'red'}
-    if [ "$USER" = "root" ]; then
-	base_prompt="%B%F{$prompt_root}%m%k "
+    case $USER in
+        root)
+            base_prompt="%B%F{red}%m%k%f"
+            ;;
+        *)
+            base_prompt="%B%F{green}%n%f"
+            ;;
+    esac
+    if [ -n "$SSH_CLIENT" ]; then
+        base_prompt="${base_prompt}%F{cyan}@%m%k$f "
     else
-	base_prompt="%B%F{$prompt_user}%n@%m%k "
+        base_prompt="${base_prompt}%F{green}@%m%k%f "
     fi
-    post_prompt="%b%f%k"
-    path_prompt="%B%F{$prompt_prompt}%1~"
+
+    post_prompt="%f%b%k"
+    path_prompt="%F{blue}%1~"
     PS1="$base_prompt$path_prompt %# $post_prompt"
     PS2="$base_prompt$path_prompt %_> $post_prompt"
     PS3="$base_prompt$path_prompt ?# $post_prompt"
