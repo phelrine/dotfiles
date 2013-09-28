@@ -5,12 +5,12 @@
         editor = emacs
 [color]
         ui = auto
-
 [alias]
         st = status
         co = checkout
         df = diff
-
 [github]
         user = phelrine
         token = ! "ruby -rpit -e \"print Pit.get('github')['token']\""
+[push]
+	default = simple
