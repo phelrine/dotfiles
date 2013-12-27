@@ -17,5 +17,11 @@ case $OSTYPE in
     *)
         ;;
 esac
-PATH="${HOME}/.gem/ruby/1.9.1/bin:$PATH"
+
+if which gem > /dev/null; then
+    GEM_PATH=$(gem env | grep -e 'EXECUTABLE\sDIRECTORY' | sed -e 's/.*:\s\(.*\)/\1/')
+    PATH="${GEM_PATH}:$PATH"
+fi
 export PATH
+
+export PYTHONPATH=${PYTHONPATH}:${HOME}/.pythonlib/
