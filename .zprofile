@@ -14,14 +14,15 @@ case $OSTYPE in
         COREUTILSPATH="/usr/local/coreutils/bin"
         PATH="$PYTHONPATH:$COREUTILSPATH:$PATH"
         ;;
-    *)
+    linux-gnu)
+        export PYTHONPATH="${HOME}/opt/python"
         ;;
+    *)
 esac
 
 if which gem > /dev/null; then
     GEM_PATH=$(gem env | grep -e 'EXECUTABLE\sDIRECTORY' | sed -e 's/.*:\s\(.*\)/\1/')
     PATH="${GEM_PATH}:$PATH"
 fi
-export PATH
 
-export PYTHONPATH=${PYTHONPATH}:${HOME}/.pythonlib/
+export PATH
