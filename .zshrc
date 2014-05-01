@@ -73,7 +73,7 @@ zstyle ':completion:*' use-cache true
 zstyle ':completion:*:default' menu select=1		# 補完候補を選択
 zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin
 
-fignore=(.o)
+fignore=(.o .meta)
 
 HISTFILE=~/.zsh_history
 HISTSIZE=1000000
