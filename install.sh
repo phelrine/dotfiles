@@ -1,16 +1,13 @@
 #!/bin/sh
+set -e
+set -u
 
-cd `dirname $0`
-DOTFILEDIR=`pwd`
+REPOSITORY_URL="https://github.com/phelrine/dotfiles.git"
+DOTFILE_HOME=${HOME}/.dotfiles
 
-FILES=".gemrc .gitconfig .tmux.conf .zshrc .zprofile"
+if [ ! -e "${DOTFILE_HOME}" ]; then
+    git clone ${REPOSITORY_URL} ${DOTFILE_HOME}
+fi
 
-case $OSTYPE in
-    linux*)
-        FILES="${FILES} .Xresources .fonts.conf"
-        ;;
-esac
-
-for f in $FILES; do
-    ln -s ${DOTFILEDIR}/${f} ${HOME}/${f}
-done
+cd ${DOTFILE_HOME}
+sh deploy.sh
