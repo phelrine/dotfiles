@@ -5,3 +5,4 @@ urxvt*scrollBar: flase
 urxvt*background: gray
 urxvt*highlightColor: violet
 urxvt*underlineColor: black
+Xcursor.size: 16
